@@ -10,18 +10,22 @@ SOURCES += \
     mytest.cpp \
     flatuiplugin.cpp
 
-DESTDIR = $$OUT_PWD/../FlatUI
-TARGET  = FlatUIplugins
-
-
-
-qml.files += FlatUI/*
-qml.path = $$OUT_PWD/../FlatUI
-
-INSTALLS += qml
-
 
 DISTFILES += \
     FlatUI/qmldir \
     FlatUI/Test.qml \
-    FlatUI/Button.qml
+    FlatUI/Button.qml \
+    FlatUI/Style.qml \
+    FlatUI/ProgressBar.qml
+
+
+DESTDIR = $$OUT_PWD/../FlatUI
+TARGET  = FlatUIplugins
+
+
+copydata.commands = $(COPY_DIR) $$PWD/FlatUI/ $$OUT_PWD/..
+first.depends = $(first) copydata
+export(first.depends)
+export(copydata.commands)
+QMAKE_EXTRA_TARGETS += first copydata
+

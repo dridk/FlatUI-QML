@@ -4,16 +4,16 @@ import QtQuick.Layouts 1.0
 import FlatUI 1.0
 
 ApplicationWindow {
+    width: 500
+    height: 400
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
 
 
     Button {
-        text: "salut"
+        anchors.centerIn: parent
     }
 
+    ProgressBar {
 
-
+    }
 }
