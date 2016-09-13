@@ -1,10 +1,10 @@
 pragma Singleton
 import QtQuick 2.5
 
-Item {
+QtObject {
 
-    property color textColor : "white"
-
+    property int fontsize : 16
+    property string fontfamilly : "Roboto"
 
 }
 

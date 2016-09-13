@@ -1,10 +1,14 @@
 import QtQuick 2.5
 import QtQuick.Controls 2.0
-ProgressBar {
+
+
+ProgressBar
+{
     id: control
     value: 0.5
 
-    background: Rectangle {
+    background: Rectangle
+    {
         implicitWidth: 200
         implicitHeight: 16
         x: control.leftPadding
@@ -13,17 +17,20 @@ ProgressBar {
         radius: 5
     }
 
-    contentItem: Item {
+    contentItem: Item
+    {
         implicitWidth: background.implicitWidth
         implicitHeight: background.implicitHeight
 
-        Rectangle {
+        Rectangle
+        {
             width: control.visualPosition * background.width
             height: parent.height
             radius: 5
             color: "red"
 
-            Label {
+            Label
+            {
                 text:control.value * 100 + "%"
                 color: "white"
                 font.family: "Roboto"

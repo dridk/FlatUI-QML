@@ -8,12 +8,24 @@ ApplicationWindow {
     height: 400
     visible: true
 
+    ColumnLayout
+    {
+        RowLayout
+        {
+            Button
+            {
+                text: "Valid button"
+                enabled: false
 
-    Button {
-        anchors.centerIn: parent
-    }
+            }
+            Button
+            {
+                text: "Warning button"
+            }
+        }
 
-    ProgressBar {
+        ProgressBar {
 
+        }
     }
 }
