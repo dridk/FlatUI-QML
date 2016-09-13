@@ -8,24 +8,32 @@ ApplicationWindow {
     height: 400
     visible: true
 
-    ColumnLayout
-    {
-        RowLayout
-        {
+    Column {
+        spacing: 5
+
             Button
             {
-                text: "Disable info button"
-                enabled: false
+                text: "Primary"
+            }
+
+            ProgressBar {
 
             }
-            Button
-            {
-                text: "Info button"
+
+            Switch {
+
             }
-        }
 
-        ProgressBar {
+            CheckBox {
 
-        }
+            }
+
+            TextField {
+
+            }
+
     }
+
+
+
 }

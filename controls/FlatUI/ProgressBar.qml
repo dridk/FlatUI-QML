@@ -1,6 +1,6 @@
 import QtQuick 2.5
 import QtQuick.Controls 2.0
-
+import FlatUI 1.0
 
 ProgressBar
 {
@@ -13,7 +13,7 @@ ProgressBar
         implicitHeight: 16
         x: control.leftPadding
         y: parent.height / 2 - height / 2
-        color: "#e6e6e6"
+        color: Style.light
         radius: 5
     }
 
@@ -27,7 +27,7 @@ ProgressBar
             width: control.visualPosition * background.width
             height: parent.height
             radius: 5
-            color: "red"
+            color: Style.warning
 
             Label
             {

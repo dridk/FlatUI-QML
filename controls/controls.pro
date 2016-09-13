@@ -13,11 +13,12 @@ SOURCES += \
 
 DISTFILES += \
     FlatUI/qmldir \
-    FlatUI/Test.qml \
     FlatUI/ProgressBar.qml \
     FlatUI/Style.qml \
     FlatUI/Button.qml \
-    FlatUI/Colors.qml
+    FlatUI/Switch.qml \
+    FlatUI/CheckBox.qml \
+    FlatUI/TextField.qml
 
 
 DESTDIR = $$OUT_PWD/../FlatUI
