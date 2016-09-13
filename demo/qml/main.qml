@@ -14,13 +14,13 @@ ApplicationWindow {
         {
             Button
             {
-                text: "Valid button"
+                text: "Disable info button"
                 enabled: false
 
             }
             Button
             {
-                text: "Warning button"
+                text: "Info button"
             }
         }
 

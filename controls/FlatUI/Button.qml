@@ -11,7 +11,7 @@ Button
 
     hoverEnabled: true
     onEnabledChanged: button.enabled ? state = "" : state = "Disable"
-    onPressedChanged: state = (button.pressed) ? "Pressed" : "Hovering"
+    onPressedChanged: bgHover.visible = (button.pressed)
     onHoveredChanged: state = (button.hovered) ? "Hovering" : ""
 
 
@@ -28,18 +28,18 @@ Button
     Rectangle
     {
         id: bgHover
-        implicitWidth: 100
-        implicitHeight: 40
+        width: bgRect.width
+        height: bgRect.height
         color:  "#55000000"
         visible: false
         border.width: 0
-        radius:4
+        radius: 4
     }
 
     contentItem: Text
     {
         id: innerTxt
-        text: "Click me"
+        text: button.text
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         elide: Text.ElideRight
@@ -60,14 +60,6 @@ Button
             {
                 target: innerTxt
                 color: "white"
-            }
-        },
-        State {
-            name: "Pressed"
-            PropertyChanges
-            {
-                target: bgHover
-                visible: true
             }
         },
         State {
